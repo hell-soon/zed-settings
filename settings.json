@@ -1,5 +1,6 @@
 {
   // --- Общие настройки и UI ---
+  "vim_mode": true,
   "ui_font_size": 16,
   "ui_font_family": "Maple Mono",
   "theme": {
@@ -13,6 +14,11 @@
     "show": "always"
   },
 
+  "project_panel": {
+    "dock": "left",
+    "indent_size": 10
+  },
+  "relative_line_numbers": "enabled",
   // --- Настройки редактора (Buffer) ---
   "buffer_font_family": "Maple Mono",
   "buffer_font_size": 16,
@@ -78,9 +84,6 @@
   },
 
   // // --- Интеграции ---
-  "project_panel": {
-    "indent_size": 10,
-  },
   "lsp": {
     "wakatime": {
       "initialization_options": {
