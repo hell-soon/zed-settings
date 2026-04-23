@@ -1,128 +1,110 @@
 {
   // --- Общие настройки и UI ---
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  "agent": {
-    "play_sound_when_agent_done": true,
-    "model_parameters": [],
-    "always_allow_tool_actions": true
-  },
-  "minimap": {
-    "show": "always"
-  },
-  "auto_signature_help": true,
-  "icon_theme": "Material Icon Theme",
-  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "ui_font_family": "Maple Mono",
   "theme": {
     "mode": "system",
     "light": "Zedokai Light",
     "dark": "Zedokai Darker"
   },
-  "ui_font_size": 16,
-  "ui_font_family": "Maple Mono",
+  "icon_theme": "Material Icon Theme",
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "always"
+  },
 
   // --- Настройки редактора (Buffer) ---
   "buffer_font_family": "Maple Mono",
   "buffer_font_size": 16,
   "buffer_font_features": {
     "calt": true,
-    "liga": true
+    "liga": true,
   },
   "tab_size": 2,
-  "on_focus_change": "on",
-  "format_on_save": "on",
-  "format_on_paste": true,
-  "formatter": {
-    "code_actions": {
-      "source.fixAll.eslint": true
-    }
-  },
-  "autosave": "on_focus_change",
-  "ensure_final_newline_on_save": true,
-  "default_line_ending": "lf",
-  "sticky_header": "on",
-  "scrollbar": {
-    "show": "always"
-  },
-  "indent_guides": {
-    "enabled": true
-  },
-  "bracket_pair_colorization": {
-    "enabled": true
+
+  // --- Strict Typing ---
+  "auto_signature_help": true,
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true
   },
 
-  // --- Языки и форматирование ---
+    // --- Форматирование и Линтинг ---
+  "format_on_save": "on",
+  "formatter": "none",
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true,
+  },
+
+  "autosave": "on_focus_change",
+  "ensure_final_newline_on_save": true,
+  "scrollbar": {
+    "show": "always",
+  },
+  "indent_guides": {
+    "enabled": true,
+  },
+  // "bracket_pair_colorization": {
+  //   "enabled": true,
+  // },
+
+  // --- Языки (Только то, что требует переопределения) ---
   "languages": {
     "JavaScript": {
       "format_on_save": "on",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "TypeScript": {
       "format_on_save": "on",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "TSX": {
       "format_on_save": "on",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
-    "Vue": {
-      "format_on_save": "on"
+    "Vue.js": {
+      "format_on_save": "on",
     },
     "Markdown": {
       // Для Markdown в Zed встроенный форматер
-    }
+    },
   },
 
-  // --- Интеграции ---
-  "copilot": {
-    "disabled": true
-  },
-  "git": {
-    "auto_fetch": "on"
-  },
+  // // --- Интеграции ---
   "project_panel": {
     "indent_size": 10,
-    "file_nesting": "on"
   },
   "lsp": {
     "wakatime": {
       "initialization_options": {
-        "api-key": "API-key"
-      }
-    }
-  },
-  // --- Терминал ---
-  "terminal": {
-    "font_family": "Maple Mono",
-    "font_size": 15,
-    "line_height": "standard",
-    "blinking": "on"
+        "api-key": "API-key",
+      },
+    },
   },
 
-  // --- Исключение файлов ---
-  "exclude_files": [
-    ".git",
-    ".github",
-    ".nuxt",
-    ".output",
-    ".pnpm",
-    ".vscode",
-    ".yarn",
-    "bower_components",
-    "dist/**",
-    "logs",
-    "node_modules",
-    "out/**",
-    "package-lock.json",
-    "pnpm-lock.yaml",
-    "tmp",
-    "yarn.lock"
-  ]
+  // --- Терминал ---
+   "terminal": {
+     "font_size": 15.0,
+     "font_family": "MesloLGS NF",
+     "font_fallbacks": ["Maple Mono"],
+     "cursor_shape": "bar",
+     "blinking": "on"
+   },
+
+   // --- Performance: Исключение тяжелых папок Nuxt ---
+   "file_scan_exclusions":[
+     "**/.git",
+     "**/.nuxt",
+     "**/.output",
+     "**/node_modules",
+     "**/dist",
+     "**/*.lock"
+   ]
 }
