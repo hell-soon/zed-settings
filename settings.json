@@ -1,17 +1,37 @@
 {
   // --- Общие настройки и UI ---
-  "vim_mode": true,
+  "vim_mode": false,
   "ui_font_size": 16,
   "ui_font_family": "Maple Mono",
   "theme": {
     "mode": "system",
-    "light": "Zedokai Light",
-    "dark": "Zedokai Darker"
+    "light": "Vitesse Refined Light Soft",
+    "dark": "Vitesse Refined Dark Soft"
   },
   "icon_theme": "Material Icon Theme",
   "base_keymap": "VSCode",
   "minimap": {
     "show": "always"
+  },
+
+  // --- Theme Overrides (Под Vitesse) ---
+  "theme_overrides": {
+    "Vitesse Refined Dark Soft": {
+      "syntax": {
+        "tag.component": {
+          "color": "#dbab64",
+          "font_style": "normal"
+        },
+      }
+    },
+    "Vitesse Refined Light Soft": {
+      "syntax": {
+        "tag.component": {
+          "color": "#a67f35",
+          "font_style": "normal"
+        },
+      }
+    }
   },
 
   "project_panel": {
@@ -31,7 +51,7 @@
   // --- Strict Typing ---
   "auto_signature_help": true,
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_type_hints": true,
     "show_parameter_hints": true
   },
